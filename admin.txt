@@ -1,0 +1,42 @@
+<html>
+
+<form id="chl_admin" name="chl_admin" method="post" action="createsurvey">
+<b>For instructions on how to set up your survey, be sure to read howto_survey.txt</b>
+<fieldset><legend>Paste the survey here:</legend>
+<textarea name="survey" rows=10 cols=80></textarea>
+</fieldset>
+
+<fieldset><legend>Paste the header for the survey here:</legend>
+<textarea name="survey_header" rows=5 cols=80></textarea>
+</fieldset>
+
+<fieldset><legend>Paste the footer for the survey here:</legend>
+<textarea name="survey_footer" rows=5 cols=80></textarea>
+</fieldset>
+
+<hr>
+
+<fieldset><legend>Paste the code for the completed survey's textarea box here:</legend>
+<textarea name="completed_textarea" rows=1 cols=80>name="cat_herding_laser_ta" rows="14" cols="18"</textarea>
+</fieldset>
+
+<fieldset><legend>Paste the header for the completed survey page here:</legend>
+<textarea name="completed_header" rows=5 cols=80></textarea>
+</fieldset>
+
+<fieldset><legend>Paste the form engine for the completed survey page here:</legend>
+<textarea name="completed_engine" rows=5 cols=80></textarea>
+</fieldset>
+
+<fieldset><legend>Paste any additional code to appear after here:</legend>
+<textarea name="completed_cleanup" rows=5 cols=80></textarea>
+</fieldset>
+
+<fieldset><legend>Paste the footer for the completed survey page here:</legend>
+<textarea name="completed_footer" rows=5 cols=80></textarea>
+</fieldset>
+
+<input type="submit" value="Create my survey!">
+
+</form>
+</html>

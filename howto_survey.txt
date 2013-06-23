@@ -1,0 +1,161 @@
+--------------------------------------------------
+ Creating a survey for use with Cat Herding Laser
+--------------------------------------------------
+
+
+I. Getting Started
+II. Types of Survey blocks
+III. FAQs
+
+
+I. Before you get started, you'll need:
+
+
+1) A plaintext editor like TextPad (http://www.textpad.com/), Notepad ++ (http://notepad-plus-plus.org/), Sublime Text 2 (http://www.sublimetext.com/2), Notepad (if you must), or the editor of your choice.
+
+I prefer TextPad, Sublime Text 2, or Notepad ++ because they allow you to view tabs and newlines, which are very important for creating your survey properly.  Be sure to turn on that feature!
+
+In TextPad, go to View > Visible Spaces
+
+Alternately, you can use a spreadsheet program like Microsoft Excel.  Some users may prefer using Excel, as it can make it easier to visualize the tabs (it's the next column) and newlines (it's the next row).
+
+If you use Excel or a similar program, you'll want to save your file in tab-delimited (or Text) format.
+
+
+II. There are six types of "blocks" you can combine to create your survey. Each individual block has several parts, which are separated by tabs.  New lines separate individual blocks. You can use any number and any combination of blocks to create your survey.
+
+Text
+Random Text
+Radio
+Random Radio
+Checkbox
+Random Checkbox
+
+Text and Random Text are not actually part of the survey you create, but they're important parts of the Un-form letter that will be created by the survey.
+
+Parts of a block: <type>	<required?>	<specific to the block>
+
+
+a) Text
+
+Description: Text blocks are any static text that you need to include as part of the Un-form letter.  These aren't actually parts of the survey, and your supporters will never see them unless they read the Un-form letter they create.
+
+How it's used:  Any sentence, paragraph, word, greeting, intro, formatting, or anything else that's helpful in framing the rest of the Un-form letter.
+
+Required field: Since this isn't part of the survey, "required" has no meaning; Text blocks are always included in the Un-form letter. You can put an empty tab here if you like.
+
+Parts of this block: <type>	<nothing>	<text>
+
+Put this in your survey file to see an example:
+Text	Not Required	LGBTQ Equality	
+
+
+b) Random Text
+
+Description: Random Text blocks are like several Text blocks together, but only one will get displayed.  These aren't actually parts of the survey, and your supporters will never see them unless they read the Un-form letter they create.
+
+How it's used: Separate each choice within a Random Text block with a tab. Random Text blocks are great for customization and making any two Un-form letters look very different.  Other than that, they're similar to Text blocks.
+
+Required field: Since this isn't part of the survey, "required" has no meaning; one Text block from a Random Text Block will always be included in the Un-form letter. You can put an empty tab here if you like.
+
+Parts of this block: <type>	<nothing>	<text>	<text>	<text> ...
+
+Put this in your survey file to see an example:
+Random Text	Not Required	is very important to me.	is extremely important to me.	is such an important issue to me.	matters a great deal to me.
+
+
+c) Radio
+
+Description: Radio blocks are "Choose one of the following" sections in a survey.  The Un-form letter will get a value specific to their choice.
+
+How it's used: Radio blocks are the most common type of block.  Using Radio blocks let you know what's most important to your supporters and each Un-form letter will be very different if you use a lot of Radio blocks in your survey.
+
+Required field: If you put "Required" (without the quotes) in this section, your supporters will have to choose one value in order to complete the survey.
+
+Parts of this block: <type>	<required?>	<prompt>	<option1>	<value1>	<option2>	<value2> ...
+
+	Prompt: The text your supporters will see on the survey prompting them, usually "Choose one of the following" or some variant
+	
+	Option: The description that your supporter will see in the survey
+	
+	Value: The value that will be added to the Un-form letter if your supporter chooses its paired option.  This does not have to be the same text as the Option, though it can be.
+	
+Put this in your survey file to see an example:
+Radio	Required	Which of the following issues of LGBTQ equality matters most to you?	Marriage Equality	I want to be able to marry the person of my dreams.	Employment Non-Discrimination	It's not fair that it's legal in 29 states to fire someone because they're LGBTQ - or because the boss THINKS they're LGBTQ.
+
+
+d) Random Radio
+
+Description: Random Radio blocks are "Choose one of the following" sections in a survey but give extra variance in the Un-form letter responses.  They are otherwise similar to Radio blocks.
+
+How it's used: If you have lots of different talking points to say about an issue, Random Radio blocks are great for making many voices heard.
+
+Required field: If you put "Required" (without the quotes) in this section, your supporters will have to choose one value in order to complete the survey.
+
+Parts of this block: <type>	<required?>	<prompt>			<option1>	<value1a>	<value1b>	<value1c> ...			<option2>	<value2a>	<value2b> ...
+
+Note that there are three tabs separating the prompt from the first option, and each option/value paired block from one another. If your options are smushed together or if there's only one, you might not have included the proper amount of tabs.
+
+Put this in your survey file to see an example:
+Random Radio	Not Required	Which best sums up your opinion on the Employment Nondiscrimination Act?			Nobody should have to hide who they are to keep their job.	I support the Employment Nondiscrimination Act (ENDA) because 90% of transgender people have faced discrimination at work or have stayed in the closet to avoid it.	I support the Employment Nondiscrimination Act (ENDA) because 8-17% of LGBTQ people have been fired or not hired when an employer found out they were LGBTQ.			If someone is discriminated against at work, they'll be discriminated against elsewhere, too.	Passing the Employment Nondiscrimination Act (ENDA) is important to me because employment affects every aspect of a person's life including health care.	Passing the Employment Nondiscrimination Act (ENDA) is important to me because  I think it's unfair that employers can decide to fire someone because they think they are LGBTQ.
+
+
+e) Checkbox
+
+Description: Checkbox blocks are "Check all that apply" sections in a survey.  They're similar to radio blocks, but you can choose more than one, and you can specify language that goes in between each choice in the Un-form letter if you like.
+
+How it's used: Checkbox blocks are great for finding out what's important to your supporters and for creating natural-sounding sentences in the Un-form letter.
+
+Required field: If you put "Required" (without the quotes) in this section, your supporters will have to choose one value in order to complete the survey.
+
+Parts of this block: <type>	<required?>	<prompt>	<option1>	<value1>	<in-between1>	<option2>	<value2>	<in-between2>	<option3>	<value3>	<in-between3> ...
+
+Put this in your survey file to see an example:
+Checkbox	Required	Are you or a loved one LGBTQ?	I am LGBTQ	As an LGBTQ person myself, these matters have a huge impact on my life. 	But I also know others that are affected by these issues, too.	I have an LGBTQ friend	A good friend of mine is LGBTQ, and I see how much these issues affect them every day. 	Also, 	My child, grandchild, or sibling is LGBTQ	I have a younger family member in school who is LGBTQ, so safe schools and an inclusive learning environment are especially important to me.	 
+
+
+f) Random Checkbox
+
+Description: Random Checkbox blocks are "Check all that apply" sections in a survey but give extra variance in the Un-form letter responses.  They are otherwise similar to Checkbox blocks.
+
+How it's used: Random Checkbox blocks are great for creating natural-sounding sentences in the Un-form letter and making many voices heard.
+
+Required field: If you put "Required" (without the quotes) in this section, your supporters will have to choose one value in order to complete the survey.
+
+Parts of this block: <type>	<required?>	<prompt>			<option1>	<value1a>	<value1b>	<value1c>	<in-between1>			<option2>	<value2a>	<value2b>	<value2c>	<in-between2>			<option2>	<value2a>	<value2b>	<value2c>	<in-between2>
+
+Put this in your survey file to see an example:
+Random Checkbox	Not Required	Which actions would you like to see the LGBTQ rights movement take on most?			Passing marriage equality laws in the states	More and more states are passing marriage equality - but without repealing the Defense of Marriage Act first, marriages in those states still won't have federal benefits.	Each time another state passes marriage equality, it's another sign that our society is ready.  That's why we need to repeal DOMA.	DOMA needs to be repealed because in 12 states and DC, marriage equality is enacted - but not for federal benefits.	!!Marriage equality might get the most attention, but other issues are important too.			Passing non-discrimination laws in the states	It's not fair that in 29 states you can be fired just for being LGBTQ.	It's unfair that in 34 states you can be fired just for being transgender.	It's unfair that landlords can decide not to rent to a gay couple.	!!
+
+
+------------------------------
+
+Note: For brevity's sake, the number of options and values for Random Text, Radio, Random Radio, Checkbox, and Random Checkbox blocks are limited in the examples above.  No upper limit has been imposed on the number of blocks, options, or values available, but keep in mind supporters may dislike completing long surveys.
+
+
+III. FAQs
+
+
+Q1) What are Random blocks used for?
+
+A1) Cat Herding Laser is great at creating Un-form letters - letters that you can send to people in positions of power - that don't all look the same.  Random Text, Random Radio, and Random Checkboxes are great for adding a lot of variety to your letters - especially if you have a lot of people taking your survey.
+
+
+Q2) Can I use HTML in my questions?
+
+A2) Yes! It's a great way to format questions the way you want.
+
+
+Q3) Can I use HTML in the answers that get put into the Un-form letter?
+
+A3) No; Un-form letters are plain-text.
+
+
+Q4) How do I insert a new line into answers so that each Un-form letter isn't a big wall of text?
+
+A4) Use two exclamation points with no spaces in between (!!) - Cat Herding Laser looks for these, and turns them into new lines in the Un-form letters.
+
+
+Q5) How many different permutations of a given Un-form letter will my survey have?
+
+A5) Cat Herding Laser will calculate that for you when you validate or create your form.  In the example survey provided, there are 4,480 possible unique form letters - not bad for only using one of each kind of block (Text, Random Text, Radio, Random Radio, Checkbox, Random Checkbox) with a very small number of options for each!
