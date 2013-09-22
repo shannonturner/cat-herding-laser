@@ -637,7 +637,7 @@ class Root(object):
     def __init__(self):
         pass
 
-    def admin(self):
+    def admin(self, **kwargs):
 
         """ cherrypy.Root.admin(): This is where the admin goes to create the survey. """
 
@@ -671,15 +671,17 @@ class Root(object):
         
         return "<a href='../survey?survey_id={0}'>Survey #{0}</a> created successfully.<br>&nbsp;<br>Based on your supporters' choices, this could create as many as <b>{1:,}</b> unique Un-form letters.  Mathematical!".format(survey_id, total_permutations)
 
-    def index(self):
+    def index(self, **kwargs):
 
         """ cherrypy.Root.index(): Without this, a 404 error would occur at the root.  Customize as desired. """
         
         return # Returns nothing; change as needed
 
-    def survey(self, survey_id=None):
+    def survey(self, **kwargs):
 
         """ cherrypy.Root.survey(): The survey page to send supporters to.  Access through /survey?survey_id=<md5 hash> """
+
+        survey_id = kwargs.get('survey_id')
 
         if survey_id == None:
             return # Returns nothing; change as needed
@@ -747,8 +749,18 @@ class Root(object):
         else:
             return "<html><form method=post action=validate>Copy and paste your survey below:<br><textarea name=survey cols=30 rows=15></textarea><input type=submit value='Validate Survey'></form></html>"
 
+    def error(self, **kwargs):
+
+        """ cherrypy.Root.error(): Catch-all error page. """
+
+        message = kwargs.get('message')
+        del kwargs
+
+        return 'Something went wrong.  Sorry. <br> Details: {0}'.format(message)
+
     admin.exposed = True
     createsurvey.exposed = True
+    error.exposed = True
     index.exposed = True
     survey.exposed = True
     submit.exposed = True
@@ -761,4 +773,5 @@ if __name__ == "__main__":
 
     cherrypy.root = Root()
     cherrypy.config.update(configuration_file)
+    cherrypy.config.update({'error_page.default': cherrypy.root.error})
     cherrypy.quickstart(cherrypy.root)        
